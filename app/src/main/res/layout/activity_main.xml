@@ -7,24 +7,27 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tv_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="24 + 54"
-        android:textColor="@color/black"
-        android:textAlignment="viewEnd"
         android:layout_marginEnd="12dp"
+        android:text=""
+        android:hint="0"
+        android:textAlignment="viewEnd"
+        style="@style/textStyle"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/text_view"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/text_view"
+        android:id="@+id/tv_result"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="=78"
+        style="@style/textStyle"
         android:visibility="gone"
-        android:textColor="@color/black"
         android:textAlignment="viewEnd"
         android:layout_marginEnd="12dp"
         android:textSize="38sp"
@@ -62,14 +65,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_C"
                 style="@style/operatorButtonStyle"
-                android:onClick="onOperatorClick"
+                android:onClick="onClearClick"
                 android:text="C" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_back"
                 style="@style/operatorButtonStyle"
-                android:onClick="onOperatorClick"
-                android:text="<<"
+                android:onClick="onBackClick"
+                android:text="i"
                 app:icon="@drawable/ic_backspace"
                 app:iconTint="@color/btnColor2" />
 
@@ -113,7 +116,7 @@
                 android:id="@+id/btn_multiply"
                 style="@style/operatorButtonStyle"
                 android:onClick="onOperatorClick"
-                android:text="x" />
+                android:text="*" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -129,10 +132,10 @@
                 android:text="4" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_6"
+                android:id="@+id/btn_5"
                 style="@style/numberButtonStyle"
                 android:onClick="onNumberClick"
-                android:text="6" />
+                android:text="5" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_6"
